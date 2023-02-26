@@ -1,0 +1,200 @@
+img {
+  max-width: 100%;
+  display: block;
+}
+
+body {
+  font-family: "Inter";
+  font-size: 22px;
+}
+
+.primary-header {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logoname img {
+  width: 150px;
+  max-width: 50%;
+  margin-left: 120px;
+  margin-top: 40px;
+}
+
+.hello {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 27px;
+  color: #000000;
+  padding-bottom: 10px;
+  float:left !important; 
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 444px;
+  height: 36px;
+  border: 1px solid #d7d7d7;
+  background: #fff;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.login-btn {
+  width: 450px;
+  height: 46px;
+  border: none;
+
+  background-color: #795ced;
+  border-radius: 4px;
+
+  font-family: "Inter";
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+
+  cursor: pointer;
+}
+/* text underline when hover */
+a:link {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+input {
+  /* fixes the text placement for placeholder */
+  text-indent: 8px;
+}
+
+.login-box input {
+  outline: 0;
+  font-family: "Inter";
+  font-style: normal;
+  font-size: 18px;
+  width: 100%;
+}
+
+.login-box p {
+  margin-top: 20px;
+  text-align: center;
+  color: #3a3a3a;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.login-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+  background: #fff;
+  margin-top: 0px;
+}
+
+.login-box form {
+  display: flex;
+  flex-direction: column;
+}
+
+.login-link {
+  position: absolute;
+  width: 210px;
+  height: 22px;
+  left: 600px;
+  top: 450px;
+
+  font-family: "Inter";
+  font-style: normal;
+  font-size: 18px;
+  line-height: 22px;
+  /* identical to box height */
+
+  text-align: center;
+
+  color: #3a3a3a;
+
+  margin-top: 20px;
+}
+
+/* Meant to handle mobile and smaller devices. */
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  body {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  .logoname img {
+    width: 6rem;
+  }
+
+  input[type="E-mail"],
+  input[type="Password"] {
+    width: 90%;
+    height: 32px;
+    margin-bottom: 8px;
+  }
+
+  .login-btn {
+    width: 150px;
+    height: 36px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    position: relative;
+    left: 45%;
+    margin: 0.5rem;
+    transform: translateX(-55%);
+  }
+}
+
+.align-left {
+  float:left; 
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #BFBFBF;
+  opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: #BFBFBF;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+  color: #BFBFBF;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  body {
+    font-size: 18px;
+    line-height: 1.6;
+  }
+
+  .logoname img {
+    width: 10rem;
+    margin-top: 50px;
+  }
+
+  input[type="E-mail"],
+  input[type="password"] {
+    width: 90%;
+    height: 36px;
+    margin-bottom: 10px;
+  }
+
+  .login-btn {
+    width: 200px;
+    height: 46px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}

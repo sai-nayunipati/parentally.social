@@ -1,0 +1,19 @@
+{% block content %}
+  <h1>Postings</h1>
+  <ul>
+    {% for posting in postings_list %}
+      <li>{{ posting }}</li>
+    {% empty %}
+      <li>No Postings found.</li>
+    {% endfor %}
+  </ul>
+
+  {% if user.is_authenticated %}
+  <form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Submit</button>
+  </form>
+  {% endif %}
+
+{% endblock %}
