@@ -1,0 +1,80 @@
+.rectangle {
+  margin-top: 20;
+  width: 500px;
+  height: 500px;
+  background-color: #f0f8ff;
+  border: 3px;
+
+  border-radius: 10px;
+  box-shadow: offset 1px 0.3px 0.3px 2px #000000;
+  opacity: 0.5;
+  position: absolute;
+  border: 1px solid #000000;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+.title {
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+.close {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 20px;
+  right: 755px;
+}
+.close:hover {
+  cursor: pointer;
+  scale: 1.1;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.inputBox {
+  position: relative;
+  width: 200px; /* Set the width of the input box */
+  height: 30px; /* Set the height of the input box */
+  top: 40%;
+  right: 90%;
+  transform: translate(-50%, -50%);
+}
+
+.title {
+  position: relative;
+  top: 30%;
+  right: 90%;
+  transform: translate(-50%, -50%);
+  margin-top: 25px;
+}
+
+.buttonStyle {
+  position: relative;
+  top: 40%;
+  right: 90%;
+  transform: translate(-50%, -50%);
+  margin-top: 5px;
+}
+.botResponse {
+  position: relative;
+  top: 150%;
+  right: 50%;
+
+  transform: translate(-50%, -50%);
+  margin-top: 5px;
+}
+.botImage {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  top: 10%;
+  margin: 0 auto;
+  padding: 0;
+
+  right: 100%;
+}
