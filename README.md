@@ -8,8 +8,30 @@
 
 One in three children in the United States are raised by single parents. This number is expected to increase. [parentally.social](https://parentally.social) is a newly-built, live platform that takes a community-driven approach to this problem.
 
-<br>
-<br>
+
+## What it does 🍽️
+
+Our website connects single parents by geographic area. It has many different places of interaction. For example, **Sharespace** offers a place for individuals to exchange goods that are no longer needed, and our **Programs** catalog highlights government and nonprofit financial opportunities.
+
+## How we built it 🛠️
+
+Our app breaks down into three parts: a HTML/CSS/JS front-end, a double Django backend for the website and ExpressJS and OpenAI for the backend and Replit for live deployment. We set up an online IDE that allowed us to collaborate before merging our code at the end.
+
+## Challenges we ran into 🔥
+
+After the hackathon started, we were inspired and wanted to change our idea. By starting over, we had to quickly identify a new tech stack and user story. There were many other challanges. Once, our entire codebase almost corrupted after a glitch in our online code editor. However, we were able to persevere.
+
+## Accomplishments that we're proud of 😊
+
+We're most proud of completing a nearly fully-functional application in 24 hours. We are excited to extend our work over the coming days and use our code as a launch pad for future development.
+
+## What we learned 📚
+
+This is one of our team's first projects made with a separate front-end and Django back-end. Learning how to make different technologies cooperate in a full-stack application was a challenging but fruitful learning process. Our team also had to carefully consider user experience and effectively designing around our value proposition.
+
+## What's next for [parentally.social](https://parentally.social)?🏆
+
+We plan to finalize our site within the next few weeks. After conducting additional market research, we may pivot to other applications. For instance, we can scale our site to include other unaddressed niches. We have an experimental chatbox built with express and OpenAI, and plan on having it released in the coming weeks.
 
 <h2 id="team"> 💁🏻‍♀️💁🏻‍♂️ Team Information</h2>
 
@@ -95,30 +117,6 @@ One in three children in the United States are raised by single parents. This nu
 </tr>
 </tbody>
 </table>
-
-## What it does 🍽️
-
-Our website connects single parents by geographic area. It has many different places of interaction. For example, **Sharespace** offers a place for individuals to exchange goods that are no longer needed, and our **Programs** catalog highlights government and nonprofit financial opportunities.
-
-## How we built it 🛠️
-
-Our app breaks down into three parts: a HTML/CSS/JS front-end, a double Django backend for the website and ExpressJS and OpenAI for the backend and Replit for live deployment. We set up an online IDE that allowed us to collaborate before merging our code at the end.
-
-## Challenges we ran into 🔥
-
-After the hackathon started, we were inspired and wanted to change our idea. By starting over, we had to quickly identify a new tech stack and user story. There were many other challanges. Once, our entire codebase almost corrupted after a glitch in our online code editor. However, we were able to persevere.
-
-## Accomplishments that we're proud of 😊
-
-We're most proud of completing a nearly fully-functional application in 24 hours. We are excited to extend our work over the coming days and use our code as a launch pad for future development.
-
-## What we learned 📚
-
-This is one of our team's first projects made with a separate front-end and Django back-end. Learning how to make different technologies cooperate in a full-stack application was a challenging but fruitful learning process. Our team also had to carefully consider user experience and effectively designing around our value proposition.
-
-## What's next for [parentally.social](https://parentally.social)?🏆
-
-We plan to finalize our site within the next few weeks. After conducting additional market research, we may pivot to other applications. For instance, we can scale our site to include other unaddressed niches. We have an experimental chatbox built with express and OpenAI, and plan on having it released in the coming weeks.
 
 ## 📜 License
 
