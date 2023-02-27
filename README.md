@@ -1,3 +1,9 @@
+# ParentAlly - All-in-one platform for single parents
+
+<div align ='center'>
+<img width="921" alt="image" src="https://user-images.githubusercontent.com/55467050/221664692-cf9fbbd3-3bfb-421c-9535-94b541e23a72.png">
+</div>
+
 ## Inspiration💡
 
 One in three children in the United States are raised by single parents. This number is expected to increase. [parentally.social](https://parentally.social) is a newly-built, live platform that takes a community-driven approach to this problem.
