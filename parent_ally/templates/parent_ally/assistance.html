@@ -1,10 +1,18 @@
+
 {% load static %}
 <link rel="stylesheet" type="text/css" href="{% static 'bootstrap.min.css' %}">
 <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+<link rel="shortcut icon" type="image/x-icon" href="{% static 'img/favicon.ico' %}">
+ <title>ParentAlly</title>
 {% block content %}
 <section class="_1fvfhai0">
 <div class="_1nvz3xs0"><div class="_1nvz3xs1 korcsc0"><a class="_1nvz3xs2" href="/" aria-label="logo"><span class="_1nvz3xs3"><img class="logo" width="120" height="28" viewBox="0 0 100 28" src="/static/img/logo.png">
-</span></a><nav class="_1nvz3xsk korcsc0"><ul class="_1nvz3xsm korcsc5"><li class="_1nvz3xso"><a class="_1nvz3xsp korcsc4 korcsc2" href="/">Sharespace</a></li><li class="_1nvz3xso"><a class="_1nvz3xsp korcsc4 korcsc2" href="/assistance" style="font-weight:600; color: #795CED;">Assistance</a></li><li class="_1nvz3xso"><a class="_1nvz3xsp korcsc4 korcsc2" href="/programs">Programs</a></li><li class="_1nvz3xso"><a class="_1nvz3xsp korcsc4 korcsc2 _1nvz3xsq" href="/connect">Connect</a></li></ul></nav><div class="korcsc1 korcsc0"><span><span class="_1nvz3xs9"><input class="_1nvz3xsb" placeholder="Search for an item" value=""></span></span><span><button type="button" class="search_button">Search</button></span></div></div></div>
+</span></a><nav class="_1nvz3xsk korcsc0"><ul class="_1nvz3xsm korcsc5"><li class="_1nvz3xso"><a class="_1nvz3xsp korcsc4 korcsc2" href="/" >Sharespace</a></li><li class="_1nvz3xso"><a class="_1nvz3xsp korcsc4 korcsc2" href="/assistance"  style="font-weight:600; color: #795CED;">Assistance</a></li><li class="_1nvz3xso"><a class="_1nvz3xsp korcsc4 korcsc2" href="/programs">Programs</a></li><li class="_1nvz3xso"><a class="_1nvz3xsp korcsc4 korcsc2 _1nvz3xsq" href="/connect">Connect</a><a class="_1nvz3xsp korcsc4 korcsc2 _1nvz3xsq" href="/chatbot">Chatbot</a></li></ul></nav><div class="korcsc1 korcsc0"><span><span class="_1nvz3xs9"><input id="input_box" class="_1nvz3xsb" placeholder="Search for an item" value=""></span></span><span><button onclick="searchTarget()" type="button" class="search_button">Search</button></span>
+
+<a href="/common/signup/">
+  <button type="button" class="search_button btndiff">Register</button>
+</a>
+</div></div></div>
 </section>
 <section class="_1ff3f300 _1ff3f302">
   <h2 class="subtitle">Near me</h2>
@@ -33,7 +41,7 @@
 
   
   <div class="data_box">
-    <a href="#">
+    <a href="/details5">
       <article class="flex_data">
         <div class="picture-box">
           <span style="box-sizing:border-box;display:block;overflow:hidden;background:none;opacity:1;"><img src="https://missouripoisoncenter.org/wp-content/uploads/2019/10/bigstock-Group-Of-Disposable-Diapers-Ar-296238739.jpg" decoding="async" data-nimg="fill" class="_19qbbiq0 _19qbbiq1 w7pzr9a" style="width:108;height:108;border-radius:8px;">
@@ -41,7 +49,7 @@
         </div>
         <div class="text-box">
           <p class="data-title">My baby needs some diapers</p>
-          <p class="data-text"></p>
+          <p class="data-text">My baby is running our diapers and I can't afford to buy more diapers. Please help</p>
           <p class="mile-text">Less than a miles away</p>
         </div>
       </article>
@@ -53,12 +61,12 @@
     <a href="#">
       <article class="flex_data">
         <div class="picture-box">
-          <span style="box-sizing:border-box;display:block;overflow:hidden;background:none;opacity:1;"><img src="https://images.squarespace-cdn.com/content/v1/586d154f03596e5605562ea7/1582916078276-XB3ODZY16D61TN28DQBN/tiny+homes+9.jpg?format=1000w" decoding="async" data-nimg="fill" class="_19qbbiq0 _19qbbiq1 w7pzr9a" style="width:108;height:108;border-radius:8px;">
+          <span style="box-sizing:border-box;display:block;overflow:hidden;background:none;opacity:1;"><img src="https://media.istockphoto.com/id/1139484240/photo/abandoned-uninhabitable-one-level-home.jpg?s=612x612&w=0&k=20&c=sg6wY0bSGHmqzzXTVzHoGLthYWNTSa_S_A0csLmkDBc=" decoding="async" data-nimg="fill" class="_19qbbiq0 _19qbbiq1 w7pzr9a" style="width:108;height:108;border-radius:8px;">
           </span>
         </div>
         <div class="text-box">
-          <p class="data-title">Free rental assistance for single parents</p>
-          <p class="data-text">We're offering free rental assistance to single parents with babies</p>
+          <p class="data-title">I'm about to encounter foreclosure</p>
+          <p class="data-text">I'm a single parent and I'm about to encounter foreclosure.</p>
           <p class="mile-text">Less than 2 miles away</p>
         </div>
       </article>
@@ -70,13 +78,13 @@
     <a href="#">
       <article class="flex_data">
         <div class="picture-box">
-          <span style="box-sizing:border-box;display:block;overflow:hidden;background:none;opacity:1;"><img src="https://images.pexels.com/photos/1395323/pexels-photo-1395323.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" decoding="async" data-nimg="fill" class="_19qbbiq0 _19qbbiq1 w7pzr9a" style="width:108;height:108;border-radius:8px;">
+          <span style="box-sizing:border-box;display:block;overflow:hidden;background:none;opacity:1;"><img src="https://i.etsystatic.com/16767425/r/il/0c48d3/2272573681/il_570xN.2272573681_3oou.jpg" decoding="async" data-nimg="fill" class="_19qbbiq0 _19qbbiq1 w7pzr9a" style="width:108;height:108;border-radius:8px;">
           </span>
         </div>
         <div class="text-box">
-          <p class="data-title">Free donut from local church</p>
-          <p class="data-text">giving out free donut every sunday</p>
-          <p class="mile-text">Less than 2 miles away</p>
+          <p class="data-title">My baby needs some clothes for the winter</p>
+          <p class="data-text">The winter is coming and my baby only has a couple pair of clothes</p>
+          <p class="mile-text">Less than 4 miles away</p>
         </div>
       </article>
     </a> 
@@ -87,13 +95,13 @@
     <a href="#">
       <article class="flex_data">
         <div class="picture-box">
-          <span style="box-sizing:border-box;display:block;overflow:hidden;background:none;opacity:1;"><img src="https://static01.nyt.com/images/2021/02/04/science/04BABYFOOD1/merlin_183200505_5c0cb430-1fd2-4731-bcf4-60ac41a0d642-videoSixteenByNine3000.jpg?year=2021&h=1687&w=3000&s=7e14534ef0c7cb4813bd1146f96d9a07a5e077aa50c7f30a358d57bafe812579&k=ZQJBKqZ0VN&tw=1" decoding="async" data-nimg="fill" class="_19qbbiq0 _19qbbiq1 w7pzr9a" style="width:108;height:108;border-radius:8px;">
+          <span style="box-sizing:border-box;display:block;overflow:hidden;background:none;opacity:1;"><img src="https://post.medicalnewstoday.com/wp-content/uploads/sites/3/2022/01/baby-eating-baby-food-thumb-732x549.jpg" decoding="async" data-nimg="fill" class="_19qbbiq0 _19qbbiq1 w7pzr9a" style="width:108;height:108;border-radius:8px;">
           </span>
         </div>
         <div class="text-box">
-          <p class="data-title">Free baby food</p>
-          <p class="data-text">Foodbank is giving out free baby food</p>
-          <p class="mile-text">Less than 3 miles away</p>
+          <p class="data-title">My baby needs some food</p>
+          <p class="data-text">We're out of our last beef can and need some help with food please</p>
+          <p class="mile-text">Less than 5 miles away</p>
         </div>
       </article>
     </a> 
@@ -104,13 +112,13 @@
     <a href="#">
       <article class="flex_data">
         <div class="picture-box">
-          <span style="box-sizing:border-box;display:block;overflow:hidden;background:none;opacity:1;"><img src="https://m.media-amazon.com/images/I/61E7CRrZEHL._AC_UF1000,1000_QL80_.jpg" decoding="async" data-nimg="fill" class="_19qbbiq0 _19qbbiq1 w7pzr9a" style="width:108;height:108;border-radius:8px;">
+          <span style="box-sizing:border-box;display:block;overflow:hidden;background:none;opacity:1;"><img src="https://media-cldnry.s-nbcnews.com/image/upload/newscms/2021_51/1823901/babysitter-mc-main1-211223-05.jpg" decoding="async" data-nimg="fill" class="_19qbbiq0 _19qbbiq1 w7pzr9a" style="width:108;height:108;border-radius:8px;">
           </span>
         </div>
         <div class="text-box">
-          <p class="data-title">Giving out this cute baby coat for the winter</p>
-          <p class="data-text">I'm giving out my son's baby coat because he grew up so much</p>
-          <p class="mile-text">Less than 7 miles away</p>
+          <p class="data-title">I need a babysitter while I'm on the job</p>
+          <p class="data-text">I work from 9 to 5 and can't afford a babysitter, please help</p>
+          <p class="mile-text">Less than 8 miles away</p>
         </div>
       </article>
     </a> 
@@ -121,13 +129,13 @@
     <a href="#">
       <article class="flex_data">
         <div class="picture-box">
-          <span style="box-sizing:border-box;display:block;overflow:hidden;background:none;opacity:1;"><img src="https://communityclothescloset.org/wp-content/uploads/2021/08/Back-Wall-Photo.jpg" style="width:108;height:108;border-radius:8px;">
+          <span style="box-sizing:border-box;display:block;overflow:hidden;background:none;opacity:1;"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSf6j1m97eObF08QepH40DiTEwb2F__K9186Q&usqp=CAU" style="width:108;height:108;border-radius:8px;">
           </span>
         </div>
         <div class="text-box">
-          <p class="data-title">Free clothes from Goodwill</p>
-          <p class="data-text">Goodwill is giving free baby clothes this Wednesday</p>
-          <p class="mile-text">Less than 10 miles away</p>
+          <p class="data-title">Looking for a babysitter</p>
+          <p class="data-text">I'm looking for a low-fee babysitter who can see my baby everyday</p>
+          <p class="mile-text">Less than 11 miles away</p>
         </div>
       </article>
     </a> 
@@ -138,13 +146,13 @@
     <a href="#">
       <article class="flex_data">
         <div class="picture-box">
-          <span style="box-sizing:border-box;display:block;overflow:hidden;background:none;opacity:1;"><img src="https://cdn.britannica.com/31/122031-050-F8FCA663/Hamburger-cheeseburger.jpg" decoding="async" data-nimg="fill" class="_19qbbiq0 _19qbbiq1 w7pzr9a" style="width:108;height:108;border-radius:8px;">
+          <span style="box-sizing:border-box;display:block;overflow:hidden;background:none;opacity:1;"><img src="https://si.vwr.com/stibo/bigweb/std.lang.all/26/81/22662681.jpg" decoding="async" data-nimg="fill" class="_19qbbiq0 _19qbbiq1 w7pzr9a" style="width:108;height:108;border-radius:8px;">
           </span>
         </div>
         <div class="text-box">
-          <p class="data-title">Giving our free hamburgers</p>
-          <p class="data-text">We're giving out delicious hamburgers for those who are hungry</p>
-          <p class="mile-text">Less than 12 miles away</p>
+          <p class="data-title">In desperate need for toilet papers</p>
+          <p class="data-text">We're out of toilet papers and I'm concerned about my baby's health</p>
+          <p class="mile-text">Less than 14 miles away</p>
         </div>
       </article>
     </a> 
@@ -155,13 +163,13 @@
     <a href="#">
       <article class="flex_data">
         <div class="picture-box">
-          <span style="box-sizing:border-box;display:block;overflow:hidden;background:none;opacity:1;"><img src="https://m.media-amazon.com/images/I/81gcsP3faRL.jpg" decoding="async" data-nimg="fill" class="_19qbbiq0 _19qbbiq1 w7pzr9a" style="width:108;height:108;border-radius:8px;">
+          <span style="box-sizing:border-box;display:block;overflow:hidden;background:none;opacity:1;"><img src="https://www.parentmap.com/sites/default/files/styles/1180x660_scaled_cropped/public/2022-03/iStock-1270939875.jpg?itok=vZA93_g4" style="width:108;height:108;border-radius:8px;">
           </span>
         </div>
         <div class="text-box">
-          <p class="data-title">Free water for the thirsty ones out there</p>
-          <p class="data-text">We're handing out free water bottles</p>
-          <p class="mile-text">Less than 13 miles away</p>
+          <p class="data-title">My baby needs a tutor</p>
+          <p class="data-text">My baby is now 10 and cannot read or write</p>
+          <p class="mile-text">Less than 15 miles away</p>
         </div>
       </article>
     </a> 
@@ -169,9 +177,42 @@
 
 
   
+<script>
+
+ const inputBox = document.getElementById("input_box");
+ inputBox.addEventListener("input", () => {
+    const dataBoxes = document.querySelectorAll(".data_box");
+     dataBoxes.forEach(box => {
+    box.style.display = "block";
+  });
+});
+
+
+function searchTarget() {
+  const inputValue = document.getElementById("input_box").value.toLowerCase();
+  const dataBoxes = document.querySelectorAll(".data_box");
+
+  dataBoxes.forEach(box => {
+    const dataTitle = box.querySelector(".data-title").textContent.toLowerCase();
+    const dataText = box.querySelector(".data-text").textContent.toLowerCase();
+
+    if (dataTitle.includes(inputValue) || dataText.includes(inputValue)) {
+      box.style.display = "block";
+    } else {
+      box.style.display = "none";
+    }
+
+
+    setInterval(() =>{
+      box.style.display = "block";
+      
+    },3000)
+  });
+}
+</script>
   
 </div>
-<div><a href="#" id="question-button" class="btn btn-primary-main"><img src="/static/img/edit.png" width="35">&nbsp;Add</a></div>
+<div><a href="#" type="button" onclick="showImage();" id="question-button" class="btn btn-primary-main"><img src="/static/img/edit.png" width="35">&nbsp;Add</a></div></div>
 </section>
 <footer>
     <p style="margin-bottom:300px;">Copyright ©ParentAlly 2023. All rights reserved. | <a href="mailto:mslee300@bu.edu" class="credits">Contact</a></p>

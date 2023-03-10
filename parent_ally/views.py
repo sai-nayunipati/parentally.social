@@ -1,22 +1,23 @@
 from django.contrib.auth.decorators import login_required
-from django.shortcuts import render, get_object_or_404, redirect
+from django.shortcuts import get_object_or_404, redirect, render
 from django.utils import timezone
 from django.views import generic
 
-from .models import Post, Profile, Comment
-from .forms import PostForm, CommentForm
+from .forms import CommentForm, PostForm
+from .models import Comment, Post, Profile
 
 
 # Create your views here.
+@login_required(login_url="common:login")
 def index(request):
     """The home page"""
-    return render(request, 'parent_ally/index.html')
+    return render(request, "parent_ally/index.html")
 
 
 def view_posts_list(request):
     """Lists all available posts with the option for authenticated users to create a new post"""
     # If form submitted
-    if request.method == 'POST':
+    if request.method == "POST":
         form = PostForm(request.POST)
         if form.is_valid():
             # Add the form to the database
@@ -27,23 +28,22 @@ def view_posts_list(request):
             posting.author = profile
             posting.save()
 
-            return redirect('/')
+            return redirect("/")
     # GET request
     else:
         # Generate the context dictionary for the template
         form = PostForm()
         # Five most recent posts
-        postings_list = Post.objects.filter(
-            type='sharespace').order_by('-create_date')
-        context = {'form': form, 'postings_list': postings_list}
+        postings_list = Post.objects.filter(type="sharespace").order_by("-create_date")
+        context = {"form": form, "postings_list": postings_list}
 
-    return render(request, 'parent_ally/index.html', context)
+    return render(request, "parent_ally/index.html", context)
 
 
 def view_assistance_list(request):
     """Lists all available posts with the option for authenticated users to create a new post"""
     # If form submitted
-    if request.method == 'POST':
+    if request.method == "POST":
         form = PostForm(request.POST)
         if form.is_valid():
             # Add the form to the database
@@ -54,23 +54,22 @@ def view_assistance_list(request):
             posting.author = profile
             posting.save()
 
-            return redirect('/')
+            return redirect("/")
     # GET request
     else:
         # Generate the context dictionary for the template
         form = PostForm()
         # Five most recent posts
-        postings_list = Post.objects.filter(
-            type='assistance').order_by('-create_date')
-        context = {'form': form, 'postings_list': postings_list}
+        postings_list = Post.objects.filter(type="assistance").order_by("-create_date")
+        context = {"form": form, "postings_list": postings_list}
 
-    return render(request, 'parent_ally/assistance.html', context)
+    return render(request, "parent_ally/assistance.html", context)
 
 
 def view_connect_list(request):
     """Lists all available posts with the option for authenticated users to create a new post"""
     # If form submitted
-    if request.method == 'POST':
+    if request.method == "POST":
         form = PostForm(request.POST)
         if form.is_valid():
             # Add the form to the database
@@ -81,37 +80,36 @@ def view_connect_list(request):
             posting.author = profile
             posting.save()
 
-            return redirect('/')
+            return redirect("/")
     # GET request
     else:
         # Generate the context dictionary for the template
         form = PostForm()
         # Five most recent posts
-        postings_list = Post.objects.filter(
-            type='connect').order_by('-create_date')
-        context = {'form': form, 'postings_list': postings_list}
+        postings_list = Post.objects.filter(type="connect").order_by("-create_date")
+        context = {"form": form, "postings_list": postings_list}
 
-    return render(request, 'parent_ally/connect.html', context)
+    return render(request, "parent_ally/connect.html", context)
 
 
 def view_programs_list(request):
-    return render(request, 'parent_ally/programs.html')
+    return render(request, "parent_ally/programs.html")
 
 
 class ListViewNoImages(generic.ListView):
     """Lists all available posts in a template without showing image thumbnails"""
-    template_name = 'parent_ally/dummy_list.html'
-    context_object_name = 'postings_list'
+
+    template_name = "parent_ally/dummy_list.html"
+    context_object_name = "postings_list"
 
 
 def view_post(request, pk):
-    """Provides a detailed view of a post with the comments section. One issue with this code is that both forms return similar arguments, and so it's hard to check which one I actually submitted. My hack solution is to check the most restrictive ones first.
-    """
+    """Provides a detailed view of a post with the comments section. One issue with this code is that both forms return similar arguments, and so it's hard to check which one I actually submitted. My hack solution is to check the most restrictive ones first."""
 
     post = get_object_or_404(Post, pk=pk)
 
     # If form submitted
-    if request.method == 'POST':
+    if request.method == "POST":
         # See if the author edited the post
         form2 = PostForm(request.POST, instance=post)
         if form2.is_valid():
@@ -119,7 +117,7 @@ def view_post(request, pk):
             post.save()
 
             # GET request
-            return redirect(f'/detail/{pk}/')
+            return redirect(f"/detail/{pk}/")
 
         # See if the user added a comment
         form = CommentForm(request.POST)
@@ -132,41 +130,41 @@ def view_post(request, pk):
             comment.save()
 
             # GET request
-            return redirect(f'/detail/{pk}/')
+            return redirect(f"/detail/{pk}/")
 
     # GET request (i.e. form not submitted)
     else:
         # Create the context dictionary for the template
         form = CommentForm()
         form2 = PostForm()
-        context = {'form': form, 'form2': form2, 'post': post}
+        context = {"form": form, "form2": form2, "post": post}
 
-    return render(request, 'parent_ally/dummy_detail.html', context)
+    return render(request, "parent_ally/dummy_detail.html", context)
 
 
 def edit_comment(request, pk):
     """
-  Edit a comment if it exists. Only the commenter can do this. 
-  Throw a 404 error if the comment does not exist. Redirect the 
-  user to the post the comment responds to if successful.
-  """
+    Edit a comment if it exists. Only the commenter can do this.
+    Throw a 404 error if the comment does not exist. Redirect the
+    user to the post the comment responds to if successful.
+    """
     comment = get_object_or_404(Comment, pk=pk)
     form = CommentForm(request.POST, instance=comment)
     if form.is_valid() and request.user == comment.author.user:
         comment = form.save()
 
     page_pk = comment.post.pk
-    return redirect(f'/detail/{page_pk}')
+    return redirect(f"/detail/{page_pk}")
 
 
-@login_required(login_url='common:login')
+@login_required(login_url="common:login")
 def delete_post(request, pk):
     """Delete a post if the user is it exists and the user is the author"""
     posting = get_object_or_404(Post, pk=pk)
     if request.user == posting.author.user:
         posting.delete()
 
-    return redirect('/')
+    return redirect("/")
 
 
 def delete_comment(request, pk):
@@ -176,13 +174,13 @@ def delete_comment(request, pk):
         post = comment.post
         comment.delete()
 
-    return redirect(f'/detail/{post.pk}')
+    return redirect(f"/detail/{post.pk}")
 
 
-@login_required(login_url='common:login')
+@login_required(login_url="common:login")
 def create_post(request):
     """A page containing a form to submit a new post"""
-    if request.method == 'POST':
+    if request.method == "POST":
         form = PostForm(request.POST)
         if form.is_valid():
             posting = form.save(commit=False)
@@ -191,10 +189,30 @@ def create_post(request):
             profile = Profile.objects.get(user=request.user)
             posting.author = profile
             posting.save()
-            return redirect('/')
+            return redirect("/")
     else:
         # Generate the context dictionary for the template
         form = PostForm()
-        context = {'form': form}
+        context = {"form": form}
 
-    return render(request, 'parent_ally/posting_form.html', context)
+    return render(request, "parent_ally/posting_form.html", context)
+
+
+def new_post(request):
+    return render(request, "parent_ally/post.html")
+
+
+def details_1(request):
+    return render(request, "parent_ally/details_1.html")
+
+
+def details_5(request):
+    return render(request, "parent_ally/details_5.html")
+
+
+def details_7(request):
+    return render(request, "parent_ally/details_7.html")
+
+
+def chatbot(request):
+    return render(request, "parent_ally/chatbot.html")

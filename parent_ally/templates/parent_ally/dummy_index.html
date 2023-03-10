@@ -1,8 +1,13 @@
 {% load static %}
-<link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'style.css' %}" />
+<link
+  rel="shortcut icon"
+  type="image/x-icon"
+  href="{% static 'img/favicon.ico' %}"
+/>
+<title>ParentAlly</title>
 {% block content %}
-  <h1 id="test">Welcome!</h1>
-  {% if user.is_authenticated %}
-  <h2>You are logged in.</h2>
-  {% endif %}
-{% endblock %}
+<h1 id="test">Welcome!</h1>
+{% if user.is_authenticated %}
+<h2>You are logged in.</h2>
+{% endif %} {% endblock %}

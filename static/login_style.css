@@ -29,7 +29,7 @@ body {
   line-height: 27px;
   color: #000000;
   padding-bottom: 10px;
-  float:left !important; 
+  float: left !important;
 }
 
 input[type="text"],
@@ -153,20 +153,23 @@ input {
 }
 
 .align-left {
-  float:left; 
+  float: left;
 }
 
-::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-  color: #BFBFBF;
+::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #bfbfbf;
   opacity: 1; /* Firefox */
 }
 
-:-ms-input-placeholder { /* Internet Explorer 10-11 */
-  color: #BFBFBF;
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: #bfbfbf;
 }
 
-::-ms-input-placeholder { /* Microsoft Edge */
-  color: #BFBFBF;
+::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: #bfbfbf;
 }
 
 @media screen and (min-width: 768px) and (max-width: 1024px) {

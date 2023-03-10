@@ -1,0 +1,58 @@
+{% load static %}<html>
+  <link rel="shortcut icon" type="image/x-icon" href="{% static 'img/favicon.ico' %}">
+ <title>ParentAlly</title>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="{% static 'chatbot_style.css' %}" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css"
+    />   <link rel="stylesheet" type="text/css" href="{% static 'bootstrap.min.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'chatbot_style.css' %}">
+    
+  </head>
+<section class="_1fvfhai0">
+<div class="_1nvz3xs0"><div class="_1nvz3xs1 korcsc0"><a class="_1nvz3xs2" href="/" aria-label="logo"><span class="_1nvz3xs3"><img class="logo" width="120" height="28" viewBox="0 0 100 28" src="/static/img/logo.png">
+</span></a><nav class="_1nvz3xsk korcsc0"><ul class="_1nvz3xsm korcsc5"><li class="_1nvz3xso"><a class="_1nvz3xsp korcsc4 korcsc2" href="/" >Sharespace</a></li><li class="_1nvz3xso"><a class="_1nvz3xsp korcsc4 korcsc2" href="/assistance">Assistance</a></li><li class="_1nvz3xso"><a class="_1nvz3xsp korcsc4 korcsc2" href="/programs">Programs</a></li><li class="_1nvz3xso"><a class="_1nvz3xsp korcsc4 korcsc2 _1nvz3xsq" href="/connect">Connect</a><a class="_1nvz3xsp korcsc4 korcsc2 _1nvz3xsq" href="/chatbot"  style="font-weight:600; color: #795CED;">Chatbot</a></li></ul></nav><div class="korcsc1 korcsc0"><span><span class="_1nvz3xs9"><input class="_1nvz3xsb" placeholder="Search for an item" value=""></span></span><span><button type="button" class="search_button">Search</button></span>
+  
+<a href="/common/signup/">
+  <button type="button" class="search_button btndiff">Register</button>
+</a>
+
+</div></div></div>
+</section>
+  <body>
+    <script type="text/javascript" src="{% static 'chatbot_script.js' %}"></script>
+    
+  
+      <div class="positioning"><h4 class="subtitle">ParentAlly Bot</h4>
+        <div class="horz">
+          
+        
+          <img class="botImage"  src="{% static 'img/robot.gif' %}" />
+        </div>
+        <input
+          id="UserInput"
+          class="inputBox "
+          type="text"
+          placeholder="How can I help you today?..."
+        />
+
+        <button id="Button" class="buttonStyle" id="submit">
+          Submit Request
+        </button>
+        <h6 id="botResponse" class="botResponse"></h6></div>
+        <div/>
+        
+  
+    </div>
+ <footer>
+    <p style="margin-bottom:300px;">Copyright ©ParentAlly 2023. All rights reserved. | <a href="mailto:mslee300@bu.edu" class="credits">Contact</a></p>
+</footer>
+  </body>
+</html>
